@@ -1,4 +1,4 @@
-# colorstreet
+# colorstreet automation
 
 Instructions to run this project.
 
