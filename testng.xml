@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+   <parameter name="laterSelectedProduct" value="2"/>  
+   <test name="Validating homepage">
+      <parameter name="selectedProducts" value="5,6,7"/>
+      <parameter name="selectStylist" value="2"/>
+   	<classes>
+      <class name="Shopping.HomePageTest"/>   
+      <class name="Shopping.CatelogTest"/>   
+      <class name="Shopping.CartTest"/>
+      <class name="Shopping.ContinueAsGuestTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
