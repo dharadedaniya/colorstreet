@@ -14,4 +14,5 @@ Instructions to run the scripts.
 10. Go to `testng.xml` file.
 11. Right click and Run as `TestNG Suite`.
 
-![image](https://user-images.githubusercontent.com/117222599/199351931-dd6a6e00-9356-48ea-84de-9e66609ba203.png)
+![image](https://user-images.githubusercontent.com/117222599/199352733-a77df684-1bdd-4e3c-af5d-ebf89a4b856c.png)
+
