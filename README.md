@@ -1,6 +1,6 @@
 # colorstreet
 
-Instructions to run the scripts.
+Instructions to run this project.
 
 1. Install Eclipse Version 2020-06 (4.16.0)
 2. Install JDK version 1.8.0_251
