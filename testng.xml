@@ -6,7 +6,7 @@
       <parameter name="selectedProducts" value="5,6,7"/>
       <parameter name="selectStylist" value="2"/>
    	<classes>
-      <class name="Shopping.HomePageTest"/>   
+      <class name="Shopping.HomePageTest"/>   	
       <class name="Shopping.CatelogTest"/>   
       <class name="Shopping.CartTest"/>
       <class name="Shopping.ContinueAsGuestTest"/>

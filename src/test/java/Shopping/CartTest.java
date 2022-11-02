@@ -21,9 +21,6 @@ public class CartTest extends Base{
 		 //Assert Product count in Cart		 
 		 int addedProudctCountInCart = cart.addedProudctCountInCart.size();
 		 Assert.assertEquals(Integer.parseInt(expectedAddedProudctCountInCart), addedProudctCountInCart);
-		 
-		 System.out.println("444444444444444444444444444444444");
-
     }
 	 
 	 	 
@@ -37,9 +34,6 @@ public class CartTest extends Base{
 		 {
 			 cart.returnToCatalogButton.click();
 		 }
-		 
-		 System.out.println("555555555555555555555555");
-
 	 }
 	 
 	 @Test(dependsOnMethods={"Shopping.CatelogTest.select_product_after_returning_from_cart"})
@@ -56,12 +50,10 @@ public class CartTest extends Base{
 		 wait = new WebDriverWait(driver,10);
 		 wait.until(ExpectedConditions.visibilityOfAllElements(cart.addedProudctCountInCart));
 		 
-		 //Verify added proudct count in cart after addition  
+		 //Verify added product count in cart after addition  
 		 int addedProudctCountInCartAfterAddition = cart.addedProudctCountInCart.size();
 		 Assert.assertEquals(Integer.parseInt(expectedAddedProudctCountInCartAfterAddition), addedProudctCountInCartAfterAddition);
 		 
-		 System.out.println("77777777777777777777777777777");
-
     }
 	 
 	 @Test(dependsOnMethods={"Shopping.CartTest.verify_added_product_in_cart_page_after_addtition"})
@@ -75,9 +67,8 @@ public class CartTest extends Base{
 		 wait.until(ExpectedConditions.visibilityOfAllElements(cart.addedProudctCountInCart));
 		 
 		//Assert "Sign in" page title
-		/* String actualGetSignInPageTitle = driver.getTitle().toLowerCase();
-		 Assert.assertEquals(expectedGetSignInPageTitle, actualGetSignInPageTitle); */
+		 String actualGetSignInPageTitle = driver.getTitle().toLowerCase();
+		 Assert.assertEquals(expectedGetSignInPageTitle, actualGetSignInPageTitle);
 		 
-		 System.out.println("88888888888888888888888888888888");
 	 }	 
 }

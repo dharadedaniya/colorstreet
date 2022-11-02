@@ -31,5 +31,4 @@ public class CatelogPage
 			//PAGE FACTORY
 			PageFactory.initElements(driver, this);
 		}
-
 }

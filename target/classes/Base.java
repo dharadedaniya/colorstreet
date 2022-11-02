@@ -1,15 +1,10 @@
 package Resources;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +12,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import pageObjects.CartPage;
 import pageObjects.CatelogPage;
 import pageObjects.ContinueAsGuestPage;
@@ -94,13 +88,5 @@ public class Base
 		//Implicit wait
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		return driver;	
-	}
-	
-	public void getScreenShotPath(String testCaseName) throws IOException
-	{
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		String destinationFile = System.getProperty("user.dir")+"//reports//"+testCaseName+".png"; 
-		FileUtils.copyFile(source, new File("D://screenshot.png"));		
 	}
 }

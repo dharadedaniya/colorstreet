@@ -1,8 +1,6 @@
 package Shopping;
 
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -52,8 +50,6 @@ public class CatelogTest extends Base {
 		 //Assert solid color page title
 		 String actualGetSolidColorPageTitle = driver.getTitle().toLowerCase();
 		 Assert.assertEquals(expectedSolidColorPageTitle, actualGetSolidColorPageTitle);
-		 
-		 System.out.println("222222222222222222222222222");
     }
 	
 	
@@ -84,24 +80,10 @@ public class CatelogTest extends Base {
 			}
 		}
 		
-		/* try{
-			 driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-			 String addedCountStr = catelog.addedProducts.getText();
-				// int addedProductCount = Integer.parseInt(addedCountStr);
-				 Assert.assertEquals(expectedAddedProductCount, addedCountStr);
-			 }
-
-			 catch (Exception e) {
-			         System.out.println("Error. Closing");
-			         driver.quit();
-			         Runtime.getRuntime().exec("taskkill /F /IM chrome.exe");} */
-		
-		
-		//Assert 3 products added
-		 
-		 
-		 System.out.println("33333333333333333333333333333333333");
-
+		wait = new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.elementToBeClickable(catelog.addedProducts));
+		String addedCountStr = catelog.addedProducts.getText();
+		Assert.assertEquals(expectedAddedProductCount, addedCountStr);
     }
 	 
 	 @Test(dependsOnMethods={"Shopping.CartTest.verify_checkout"})
@@ -130,8 +112,5 @@ public class CatelogTest extends Base {
 				 }
 			 }
 		 }
-		 
-		 System.out.println("66666666666666666666");
-
     }
 }

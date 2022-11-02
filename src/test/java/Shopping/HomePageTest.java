@@ -30,9 +30,7 @@ public class HomePageTest extends Base {
 	
 	 @Test
      public void select_and_verify_country() {
-		 
-		 System.out.println("Inside select country - 1");
-        
+	        
 		 // Select country 
 		 WebElement country = homepage.country;
 		 Select countryDropdown = new Select(country);
